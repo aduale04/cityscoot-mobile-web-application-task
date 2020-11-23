@@ -1,6 +1,3 @@
-<!--
-Sample design layouts example: https://getbootstrap.com/docs/4.0/examples/jumbotron/
--->
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,52 +5,51 @@ Sample design layouts example: https://getbootstrap.com/docs/4.0/examples/jumbot
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>Routes</title>
+    <link href="assets/css/custom.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="css/custom.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
 </head>
 
 <body>
-<!--Navbar start -->
 <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
-    <a class="navbar-brand" href="index.html">TMA</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsDefault"
-            aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/images/city-scoot-logo.png">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsDefault"
+                aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="collapse navbar-collapse justify-content-end" id="navbarsDefault">
-        <ul class="navbar-nav m-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="routes.html">Routes <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="guides.html">Guides</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="safety.html">Safety</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="scooters.html">Scooters</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#" data-toggle="modal" data-target="#themeModal">Apply Theme</a>
-            </li>
-        </ul>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarsDefault">
+            <ul class="navbar-nav m-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="routes.html">Routes <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="guides.html">Guides</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="safety.html">Safety</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="scooters.html">Scooters</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
-<!--Navbar end -->
-<!--Main start -->
 <main role="main">
-    <div class="container">
+    <div class="container mt-2">
         <div class="row">
             <nav aria-label="breadcrumb" class="nav-breadcrumb">
                 <ol class="breadcrumb">
@@ -62,9 +58,8 @@ Sample design layouts example: https://getbootstrap.com/docs/4.0/examples/jumbot
                 </ol>
             </nav>
         </div>
-        <!-- Example row of columns -->
-        <div class="row">
-            <div class="col-md-9 col-lg-9 col-sm-9">
+        <div class="row mb-2">
+            <div class="col-sm-6 col-md-4 col-lg-3">
                 CityScoot tours are designed around areas of London, such as Soho, Bloomsbury, Greenwich, Camden Town
                 etc.
                 Routes take in major highlights, but also explore off-the-beaten-track.
@@ -72,8 +67,8 @@ Sample design layouts example: https://getbootstrap.com/docs/4.0/examples/jumbot
                 longer stop for lunch or dinner.
                 Bookings can be made up to two-hours before the tour starts.
             </div>
-            <div class="col-md-3 col-lg-3 col-sm-3">
-                <img src="files/routes/images/routes-icon.png" class="img-fluid" alt="Responsive image">
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <img src="assets/images/routes-icon.png" class="img-fluid" alt="">
             </div>
         </div>
         <div class="row">
@@ -166,73 +161,11 @@ Sample design layouts example: https://getbootstrap.com/docs/4.0/examples/jumbot
         </div>
         <hr>
 
-    </div> <!-- /container -->
-    <!-- Modal -->
-    <div class="modal fade" id="themeModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
-         aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalLabel">Apply Theme</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body container">
-                    <div class="form-group row">
-                        <label for="primaryColor" class="col-form-label col-sm-6 col-md-4 col-lg-4">Primary
-                            Color</label>
-                        <input type="color" class="form-control col-sm-6 col-md-2 col-lg-2" name="primaryColor"
-                               id="primaryColor">
-                        <label for="secondaryColor" class="col-form-label col-sm-6 col-md-4 col-lg-4">Secondary
-                            Color</label>
-                        <input type="color" class="form-control col-sm-6 col-md-2 col-lg-2" name="primaryColor"
-                               id="secondaryColor">
-                    </div>
-                    <div class="form-group row">
-                        <label for="naveBgColor" class="col-form-label col-sm-6 col-md-4 col-lg-4">Navbar
-                            background</label>
-                        <input type="color" class="form-control col-sm-6 col-md-2 col-lg-2" name="naveBgColor"
-                               id="naveBgColor">
-                        <label for="bodyBg" class="col-form-label col-sm-6 col-md-4 col-lg-4">Background
-                            Color</label>
-                        <input type="color" class="form-control col-sm-6 col-md-2 col-lg-2" name="bodyBg"
-                               id="bodyBg">
-                    </div>
-                    <div class="form-group row">
-                        <label for="fontFamily" class="col-form-label col-sm-6 col-md-4 col-lg-4">Font</label>
-                        <input type="text" class="form-control col-sm-6 col-md-8 col-lg-8" name="fontFamily" placeholder="Comma separate font family"
-                               id="fontFamily">
-                    </div>
-                    <div class="form-group row">
-                        <label for="fontFamily" class="col-form-label col-sm-6 col-md-4 col-lg-4">Font Size</label>
-                        <input type="number" class="form-control col-sm-6 col-md-8 col-lg-8" name="fontSize"
-                               id="fontSize">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" onclick="applyTheme()">Apply Theme</button>
-                </div>
-            </div>
-        </div>
     </div>
 </main>
-<!--Main end -->
-<!--Footer start -->
-<footer class="container py-5">
+<footer class="container">
     <div class="row">
-        <div class="col-12 col-md">
-            <small class="d-block mb-3 text-muted">&copy; 2020</small>
-            <p>
-                CityScoot guides have detailed, in-depth knowledge of London’s highlights as well as its lesser known
-                attractions.
-                They will take you along rivers, down canal towpaths, through hidden streets, through busting markets.
-                Many of our guides are qualified lawyers, doctors, architects and historians, bringing their specialist
-                knowledge to their work.
-            </p>
-        </div>
-        <div class="col-6 col-md">
+        <div class="col-sm-6 col-md-4 col-lg-3">
             <h5>Menu Links</h5>
             <ul class="list-unstyled text-small">
                 <li>
@@ -255,7 +188,7 @@ Sample design layouts example: https://getbootstrap.com/docs/4.0/examples/jumbot
                 </li>
             </ul>
         </div>
-        <div class="col-6 col-md">
+        <div class="col-sm-6 col-md-4 col-lg-3">
             <h5>About</h5>
             <ul class="list-unstyled text-small">
                 <li><a class="text-muted" href="#">Team</a></li>
@@ -265,29 +198,8 @@ Sample design layouts example: https://getbootstrap.com/docs/4.0/examples/jumbot
                 <li><a class="text-muted" href="#">privacy</a></li>
             </ul>
         </div>
-
     </div>
 </footer>
-<!--Footer end -->
-
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-<script>
-    window.jQuery || document.write('<script src="js/jquery-slim.min.js"><\/script>')
-    $(document).ready(function () {
-        // Close modal on button click
-        $(".modal-footer .btn-primary").on('click', function () {
-            $(".close").click();
-        });
-    })
-</script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/custom.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
 </body>
 </html>
-

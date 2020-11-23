@@ -1,0 +1,87 @@
+/* import the necessary Bootstrap files */
+@import "../bootstrap/scss/functions";
+@import "../bootstrap/scss/variables";
+:root {
+  --primary-color: $blue;
+  --secondary-color: $gray-900;
+  --success-color: $green;
+  --info-color: $cyan;
+  --warning-color: $yellow;
+  --danger-color: $red;
+  --light-color: $gray-100;
+  --dark-color: $gray-800;
+  --body-bg-color: #f6f6f6;
+  --body-color: #000000;
+  --primary-font: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --secondary-font: Georgia, "Times New Roman", Times, serif;
+  --font-monospace: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-size-default: 14px;
+}
+
+@import "../bootstrap/scss/bootstrap";
+$font-family-sans-serif: var(--primary-font);
+$font-size-default: var(--font-size-default);
+
+$font-color: $black;
+$font-weight: 400;
+
+@function bg-color($color) {
+  @return $color;
+}
+
+$primary: var(--primary-color);
+$secondary: var(--secondary-color);
+$body-bg: var(--body-bg-color);
+$body-color: var(--body-color);
+body {
+  font-family: $font-family-sans-serif !important;
+  font-size: $font-size-default !important;
+  color: $font-color;
+  font-weight: $font-weight;
+}
+
+.banner {
+  position: relative;
+  color: $white;
+  opacity: 0.8;
+  background-size: cover;
+  width: 100%;
+  height: 50%;
+}
+
+.home-banner {
+  background-image: url("../images/city-scoot-banner.jpg");
+}
+
+.routes-banner {
+  background-image: url("../images/routes-icon.png");
+}
+
+.p-text-cover {
+  background: #0000004f;
+}
+
+.nav-breadcrumb {
+  width: 100%;
+  margin-top: 90px;
+}
+
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 80%;
+  width: 100%;
+  position: absolute;
+}
+
+.navbar-brand img{
+  width: 50%;
+  height: 50px;
+}
