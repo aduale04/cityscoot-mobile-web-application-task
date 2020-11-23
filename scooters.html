@@ -15,15 +15,7 @@ Sample design layouts example: https://getbootstrap.com/docs/4.0/examples/jumbot
     <link href="css/custom.css" rel="stylesheet">
 </head>
 
-<body style="
-        --primary-color:#3060ee;
-        --secondary-color:#66979d;
-        --body-bg-color:#ffff;
-        --body-color:#000000;
-        --nav-bg-color:rgba(233,233,233,0.8);
-        --primary-font:'sans-serif';
-        --secondary-font: 'Georgia, 'Times New Roman', Times, serif';
-">
+<body>
 <!--Navbar start -->
 <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
     <a class="navbar-brand" href="index.html">TMA</a>
@@ -52,6 +44,9 @@ Sample design layouts example: https://getbootstrap.com/docs/4.0/examples/jumbot
             <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact Us</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="modal" data-target="#themeModal">Apply Theme</a>
+            </li>
         </ul>
     </div>
 </nav>
@@ -70,8 +65,10 @@ Sample design layouts example: https://getbootstrap.com/docs/4.0/examples/jumbot
         <!-- Example row of columns -->
         <div class="row">
             <div class="col-12">
-                With a top speed of 25 km/h and a range of 40 km, the Blast electric scooters are the perfect urban mobility solution
-                for getting around a modern city like London. Scooters are lightweight and can easily be folded and carried.
+                With a top speed of 25 km/h and a range of 40 km, the Blast electric scooters are the perfect urban
+                mobility solution
+                for getting around a modern city like London. Scooters are lightweight and can easily be folded and
+                carried.
                 They can also be switched to traditional foot mode, if the battery is empty.
                 <br/>
                 Blast scooters features include:
@@ -83,9 +80,9 @@ Sample design layouts example: https://getbootstrap.com/docs/4.0/examples/jumbot
             <div class="col-md-8 col-sm-6">
                 <ul>
                     <li>GPS/GPRS devices and anti-theft systems.</li>
-                    <li>Fairlight anti-slip brakes.  </li>
-                    <li>High capacity 60V batteries with a typical four-hour charge life.  </li>
-                    <li>Height adjustable handlebars. </li>
+                    <li>Fairlight anti-slip brakes.</li>
+                    <li>High capacity 60V batteries with a typical four-hour charge life.</li>
+                    <li>Height adjustable handlebars.</li>
                 </ul>
             </div>
             <div class="col-md-4 col-sm-6">
@@ -96,7 +93,57 @@ Sample design layouts example: https://getbootstrap.com/docs/4.0/examples/jumbot
         <hr>
 
     </div> <!-- /container -->
-
+    <!-- Modal -->
+    <div class="modal fade" id="themeModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Apply Theme</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body container">
+                    <div class="form-group row">
+                        <label for="primaryColor" class="col-form-label col-sm-6 col-md-4 col-lg-4">Primary
+                            Color</label>
+                        <input type="color" class="form-control col-sm-6 col-md-2 col-lg-2" name="primaryColor"
+                               id="primaryColor">
+                        <label for="secondaryColor" class="col-form-label col-sm-6 col-md-4 col-lg-4">Secondary
+                            Color</label>
+                        <input type="color" class="form-control col-sm-6 col-md-2 col-lg-2" name="primaryColor"
+                               id="secondaryColor">
+                    </div>
+                    <div class="form-group row">
+                        <label for="naveBgColor" class="col-form-label col-sm-6 col-md-4 col-lg-4">Navbar
+                            background</label>
+                        <input type="color" class="form-control col-sm-6 col-md-2 col-lg-2" name="naveBgColor"
+                               id="naveBgColor">
+                        <label for="bodyBg" class="col-form-label col-sm-6 col-md-4 col-lg-4">Background
+                            Color</label>
+                        <input type="color" class="form-control col-sm-6 col-md-2 col-lg-2" name="bodyBg"
+                               id="bodyBg">
+                    </div>
+                    <div class="form-group row">
+                        <label for="fontFamily" class="col-form-label col-sm-6 col-md-4 col-lg-4">Font</label>
+                        <input type="text" class="form-control col-sm-6 col-md-8 col-lg-8" name="fontFamily"
+                               placeholder="Comma separate font family"
+                               id="fontFamily">
+                    </div>
+                    <div class="form-group row">
+                        <label for="fontFamily" class="col-form-label col-sm-6 col-md-4 col-lg-4">Font Size</label>
+                        <input type="number" class="form-control col-sm-6 col-md-8 col-lg-8" name="fontSize"
+                               id="fontSize">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="applyTheme()">Apply Theme</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
 <!--Main end -->
 <!--Footer start -->
@@ -105,9 +152,11 @@ Sample design layouts example: https://getbootstrap.com/docs/4.0/examples/jumbot
         <div class="col-12 col-md">
             <small class="d-block mb-3 text-muted">&copy; 2020</small>
             <p>
-                CityScoot guides have detailed, in-depth knowledge of London’s highlights as well as its lesser known attractions.
+                CityScoot guides have detailed, in-depth knowledge of London’s highlights as well as its lesser known
+                attractions.
                 They will take you along rivers, down canal towpaths, through hidden streets, through busting markets.
-                Many of our guides are qualified lawyers, doctors, architects and historians, bringing their specialist knowledge to their work.
+                Many of our guides are qualified lawyers, doctors, architects and historians, bringing their specialist
+                knowledge to their work.
             </p>
         </div>
         <div class="col-6 col-md">
@@ -154,8 +203,17 @@ Sample design layouts example: https://getbootstrap.com/docs/4.0/examples/jumbot
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="js/jquery-slim.min.js"><\/script>')</script>
+<script>
+    window.jQuery || document.write('<script src="js/jquery-slim.min.js"><\/script>')
+    $(document).ready(function () {
+        // Close modal on button click
+        $(".modal-footer .btn-primary").on('click', function () {
+            $(".close").click();
+        });
+    })
+</script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/custom.js"></script>
 </body>
 </html>

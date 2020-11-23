@@ -26,18 +26,19 @@ $black: #000;
 
 :root {
   --primary-color: $blue;
-  --secondary-color: $gray-600;
+  --secondary-color: $gray-900;
   --success-color: $green;
   --info-color: $cyan;
   --warning-color: $yellow;
   --danger-color: $red;
   --light-color: $gray-100;
   --dark-color: $gray-800;
-  --body-bg-color: #eee9e9;
+  --body-bg-color: #f6f6f6;
   --body-color: #000000;
   --primary-font: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --secondary-font: Georgia, "Times New Roman", Times, serif;
   --font-monospace: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-size-default: 14px;
 }
 
 @import "../bootstrap/scss/bootstrap";
@@ -45,6 +46,7 @@ $font-family-sans-serif: var(--primary-font);
 $font-family-serif: var(--secondary-font);
 $font-family-monospace: var(--font-monospace);
 $font-family-base: $font-family-sans-serif;
+$font-size-default: var(--font-size-default);
 
 $primary: var(--primary-color);
 $secondary: var(--secondary-color);
@@ -55,7 +57,12 @@ $danger: var(--danger-color);
 $light: var(--light-color);
 $dark: var(--dark-color);
 
-$nav-bg: var(--nav-bg-color);
+
+$navbar-dark-color: #fff;
+$navbar-dark-hover-color: #000;
+$navbar-dark-active-color: #222;
+$active-bg-color: var(--nav-bg-color);
+;
 $body-bg: var(--body-bg-color);
 $body-color: var(--body-color);
 $link-color: $primary;
@@ -69,34 +76,38 @@ $theme-colors: (
         light: $light,
         dark: $dark
 );
-
 body {
-  background-color: var(--body-bg-color) !important;
-  color: var(--body-color) !important;
+  font-family: $font-family-sans-serif !important;
+  font-size: $font-size-default !important;
 }
 
-a {
-  color: $link-color;
-}
+.navbar {
+  color: $white !important;
+  background-color: $active-bg-color !important;
 
-.bg-light {
-  background-color: $nav-bg !important;
-  color: $white;
+  .nav-link {
+    &:hover {
+      color: $white !important;
+      background-color: $active-bg-color;
+    }
+  }
 }
 
 .btn-primary {
-  background-color: map-get($theme-colors, "primary");
   color: #fff;
-  border-color: map-get($theme-colors, "primary");
-}
-
-.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
-  color: #fff;
-  background-color: map-get($theme-colors, "primary");
-  border-color: map-get($theme-colors, "primary");
+  background-color: $primary;
+  border-color: $primary;
 }
 
 .btn-primary:hover {
+  color: #fff;
+  background-color: $primary;
+  border-color: $primary;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
   color: #fff;
   background-color: map-get($theme-colors, "primary");
   border-color: map-get($theme-colors, "primary");
@@ -119,7 +130,7 @@ a {
   background-image: url("../files/routes/images/routes-icon.png");
 }
 
-.p-text-cover{
+.p-text-cover {
   background: #0000004f;
 }
 
