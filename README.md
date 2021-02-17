@@ -21,4 +21,9 @@ to use.
 • The app must be context appropriate in terms of design.
 • Icons should be used in place of text where appropriate. 
 
+## Technologies used
 
+HTML
+CSS
+SCSS
+Bootstrap 4
