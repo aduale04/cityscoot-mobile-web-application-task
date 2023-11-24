@@ -3,7 +3,7 @@
 This is a solution for a mobile application development task using bootstrap 4. all the customisation of the bootstrap was done throug the manipuation of the Sass source code.
 
 ## App requirements
-CityScoot is a start-up tour company that wishes to offer tours of London by
+City Scoot is a start-up tour company that wishes to offer tours of London by
 motorised scooter. They want a mobile web application that allows users to find out
 about the tour routes, tour guides the scooter technology they use, and the safety
 policy they follow. You have been tasked with building this application.
